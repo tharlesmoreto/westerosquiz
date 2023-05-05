@@ -1,72 +1,74 @@
 /*--------------import--------------*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@400;800&family=Poppins:wght@400;500;700;900&display=swap');
 
+
+/*--------------Reset--------------*/
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+/*--------------Global--------------*/
 
-body {
+/*--------------Home Screen--------------*/
+.home-screen{
+  display: grid;
+  font: 800 12px Nunito;
   background: #462980;
-  height: 100vh;
+
+  position: absolute;
+  z-index: 1;
+
+  height: 100%;
+  width: 100%;
 }
 
-#logo{
-  height: 60px;
+.logo{
+  display: grid;
+  align-content: center;
+  height: 3.75rem;
+  width: 100%;
   background: #462980;
-  box-shadow: 0px 3px 12px #0000003d;
-
-  display: flex;
-  align-items: center;
+  box-shadow: 0px 0px 12px #0000003a;
 }
 
-#logo p{
- margin-left: 30px; 
-
+.logo p{
+ margin-left: 2rem; 
  font: 800 22px Nunito;
  color: #ffffff;
-}
 
-section{
+}
+.container{
   display: grid;
-  justify-content: center;
+  place-content: center;
+}
+.box{
   text-align: center;
-  font: 800 12px Nunito;
-}
-
-#container{
   background: #ffffff;
-  width: 358px;
-  height: 478px;
-  margin-top: 54px;
-  
-  border-radius: 20px;
-  box-shadow: 0px 0px 35px #0000003d;
 
+  width: auto;
+  height: auto;
+  padding: 1.5rem;
 
+  border-radius: 1.2rem;
+  box-shadow: 0px 0px 35px #0000003a;
 }
-
 .titulo{
   font-size: 30px;
-  margin-top: 20px;
   color: #462980;
-  line-height: 1;
 }
 
 #quiz{
   font-family: arial;
-  margin: 41px 33px;
-
+  margin: 2rem;
   display: grid;
-  justify-content: center;
-  text-align: center;
-  column-gap: 18px;
+  place-content: center;
 }
 
 .pergunta{
   font: bold 18px arial;
   color: #693DBF;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 ol{
@@ -77,18 +79,17 @@ li{
   list-style: none;
   cursor: pointer;
 
-  width: 292px;
-  height: 33px;
+  width: 18.25rem;
+  height: 2rem;
 
   background: #693DBF;
   color: #ffffff;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  place-content: center;
 
-  margin-bottom: 18px;
-  border-radius: 100px;
+  margin-bottom: 1rem;
+  border-radius: 6rem;
 }
 
 li:hover{
@@ -96,27 +97,87 @@ li:hover{
 }
 
 .btn{
-  width: 150px;
-  height: 32px;
+  width: 9rem;
+  height: 2rem;
 
-  background: #462980;  
-  color:#ffffff;
-
-  border-radius: 35px;
-  border: none;
-
+  background: #ffffff;  
+  border: 1px solid #693DBF;
+  color: #693DBF;;
+  border-radius: 2rem;
+ 
   font: 800 14px Nunito; 
   cursor: pointer;
 }
 
 .btn:hover{
-  background: #693DBF;
+  background: #462980;   
+  border: none;
+  color: #ffffff;
 }
 
-footer{
+.name{
   font: 400 12px Nunito;
   color: #ffffff;
-  margin-top: 32px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
+
+
+/*--------------Pop-up Result--------------*/
+.fundo-escuro{
+  background: rgba(0, 0, 0, 0.438);
+
+  position: fixed;
+  z-index: 2;
+  
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------Mobile--------------*/
+@media (min-width:360px) and (max-width:405px) {
+  .logo {
+    place-content: center;
+  }
+  .logo p{
+    margin-left:0;
+   }
+  .box{
+    width: 21rem;
+    padding: 1.5rem;
+  }
+  li{
+    width: 16rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
