@@ -9,23 +9,6 @@
 }
 
 /*--------------Reuse--------------*/
-.btn{
-  width: 9rem;
-  height: 2rem;
-
-  background: #ffffff;  
-  border: 1px solid #693DBF;
-  color: #693DBF;;
-  border-radius: 2rem;
- 
-  font: 800 14px Nunito; 
-  cursor: pointer;
-}
-.btn:hover{
-  background: #462980;   
-  border: none;
-  color: #ffffff;
-}
 .titulo{
   font: 800 25px Nunito;
   color: #462980;
@@ -41,11 +24,6 @@
   padding: 30px;
   border-radius: 1.2rem;
   box-shadow: 0px 0px 35px #0000003a;
-}
-.pergunta{
-  font: 500 25px DM Sans;
-  color: #462980;
-  margin: 20px 0;
 }
 /*--------------Global--------------*/
 .global{
@@ -90,13 +68,34 @@
 .start .titulo{
   width: 300px;
 } 
+.perguntaStart{
+  font: 500 25px DM Sans;
+  color: #462980;
+  margin: 20px 0;
+}
 .start .pergunta{
   font-size: 20px;
   margin: 15px 0 0 0;
 } 
-.start .btn{
+.btnStart{
+  width: 9rem;
+  height: 2rem;
+
+  background: #ffffff;  
+  border: 1px solid #693DBF;
+  color: #693DBF;;
+  border-radius: 2rem;
+ 
+  font: 800 14px Nunito; 
+  cursor: pointer;
+
   margin-top: 30px;
-} 
+}
+.btnStart:hover{
+  background: #462980;   
+  border: none;
+  color: #ffffff;
+}
 
 /*--------------Process--------------*/
 
@@ -119,12 +118,35 @@
   height: auto;
   margin-bottom: 30px;
 }
+.perguntaProcess{
+  font: 500 25px DM Sans;
+  color: #462980;
+  margin: 20px 0;
+}
 .respostas{
   display: grid;
   place-items: center;
   height: 13rem;
 }
+.btnProcess{
+  width: 9rem;
+  height: 2rem;
 
+  background: #ffffff;  
+  border: 1px solid #693DBF;
+  color: #693DBF;;
+  border-radius: 2rem;
+ 
+  font: 800 14px Nunito; 
+  cursor: pointer;
+
+  margin-top: 30px;
+}
+.btnProcess:hover{
+  background: #462980;   
+  border: none;
+  color: #ffffff;
+}
 #res{
   display: grid;
   place-items: center;
