@@ -1,13 +1,12 @@
 import {perguntas, respostas} from './perguntaserespostas.js';
 
+
 function viewProcess (){
   let process = document.querySelector('.process');
   process.classList.add("show");
 
   let start = document.querySelector('.start');
   start.classList.add("show");
-
- 
 }
 
 let btnStart = document.querySelector('.btnStart');
