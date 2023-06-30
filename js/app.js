@@ -13,13 +13,13 @@ let btnStart = document.querySelector('.btnStart');
 btnStart.addEventListener("click", viewProcess);
 
 
-let indice = 0
+let indice = 1
+let pergunta = document.querySelector('.perguntaProcess')
+pergunta.textContent = perguntas[0]
 
 function next (){
-
   if (indice < perguntas.length){
-    let pergunta = document.querySelector('.perguntaProcess')
-    pergunta.textContent = perguntas[indice]
+    pergunta.textContent = perguntas[indice] 
     indice++
   }
 }
