@@ -1,4 +1,4 @@
-const perguntas = [
+const questionData = [
   'Qual é o valor mais importante para você?',
   'Qual é o seu estilo de luta preferido?',
   'Qual é o seu animal favorito?',
@@ -14,4 +14,12 @@ const respostas = [
   ['Carne de porco', 'Peixe', 'Carneiro', 'Frango']
 ]
 
-export { perguntas, respostas }
+const responseData = {
+  one: ['Honra', 'Sabedoria', 'Lealdade', 'Ambição'],
+  two: ['Espada e escudo', 'Arco e flecha', 'Magia', 'Machado e escudo'],
+  three: ['Lobo', 'Falcão', 'Dragão', 'Leão'],
+  four: ['Inverno', 'Primavera', 'Verão', 'Outono'],
+  five: ['Carne de porco', 'Peixe', 'arneiro', 'Frango']
+}
+
+export { questionData, responseData, respostas }

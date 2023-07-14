@@ -168,3 +168,7 @@
 #res:hover{
   background: #8065b4;
 }
+
+#res.show{
+  background: #8065b4;
+}
