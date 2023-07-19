@@ -116,7 +116,6 @@
 .quiz{
   width: 350px;
   height: auto;
-  margin-bottom: 30px;
 }
 .perguntaProcess{
   font: 500 25px DM Sans;
@@ -147,6 +146,20 @@
   border: none;
   color: #ffffff;
 }
+.btnProcess:disabled{
+  border: 1px solid #ccc;   
+  color: #ccc;
+}
+.btnProcess:disabled:hover{
+  border: 1px solid #ccc;   
+  color: #ccc;
+}
+.btnProcess.active{
+  background: #462980;   
+  border: none;
+  color: #ffffff;
+}
+
 #res{
   display: grid;
   place-items: center;
@@ -169,6 +182,6 @@
   background: #8065b4;
 }
 
-#res.show{
+#res.active{
   background: #8065b4;
 }

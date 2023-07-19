@@ -6,7 +6,7 @@ const questionData = [
   'Qual é a sua comida preferida?'
 ]
 
-const respostas = [
+const responseData = [
   ['Honra', 'Sabedoria', 'Lealdade', 'Ambição'],
   ['Espada e escudo', 'Arco e flecha', 'Magia', 'Machado e escudo'],
   ['Lobo', 'Falcão', 'Dragão', 'Leão'],
@@ -14,12 +14,4 @@ const respostas = [
   ['Carne de porco', 'Peixe', 'Carneiro', 'Frango']
 ]
 
-const responseData = {
-  one: ['Honra', 'Sabedoria', 'Lealdade', 'Ambição'],
-  two: ['Espada e escudo', 'Arco e flecha', 'Magia', 'Machado e escudo'],
-  three: ['Lobo', 'Falcão', 'Dragão', 'Leão'],
-  four: ['Inverno', 'Primavera', 'Verão', 'Outono'],
-  five: ['Carne de porco', 'Peixe', 'arneiro', 'Frango']
-}
-
-export { questionData, responseData, respostas }
+export { questionData, responseData }

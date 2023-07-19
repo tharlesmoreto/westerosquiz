@@ -1,5 +1,7 @@
-import { questionData, responseData, respostas } from './perguntaserespostas.js'
+// --------------------------------- Import ---------------------------------
+import { questionData, responseData } from './perguntaserespostas.js'
 
+// --------------------------------- Star ---------------------------------
 function viewProcess() {
   let process = document.querySelector('.process')
   process.classList.add('show')
@@ -11,21 +13,33 @@ function viewProcess() {
 let btnStart = document.querySelector('.btnStart')
 btnStart.addEventListener('click', viewProcess)
 
-let i = 1
-let counter = 0
+// --------------------------------- Process ---------------------------------
+let result = 0
 
 let question = document.querySelector('.perguntaProcess')
 question.textContent = questionData[0]
 
 let answers = document.querySelector('.respostas')
-answers.innerHTML = respostas[counter].map(response => `<div>${response}</div>`).join('')
+answers.innerHTML = responseData[0]
+  .map(response => `<div id="res">${response}</div>`)
+  .join('')
+
+let i = 1
 
 function next() {
-  if (i < questionData.length) {
-    console.log((question.textContent = questionData[i]))
+  if (i < questionData.length && i < responseData.length) {
+
+    question.textContent = questionData[i]
+    answers.innerHTML = responseData[i]
+      .map(response => `<div id="res">${response}</div>`)
+      .join('')
     i++
   }
 }
+
+
+let selected = document.querySelector('#res')
+
 
 let nextProcess = document.querySelector('.btnProcess')
 nextProcess.addEventListener('click', next)
