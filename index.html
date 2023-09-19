@@ -7,6 +7,9 @@
     <title>WesterosQuiz</title>
   </head>
   <body>
+    <div class="loading">
+      <span>WesterosQuiz</span>
+    </div>
     <header class="logo">
       <p class="iconLogo">WesterosQuiz</p>
     </header>
@@ -45,6 +48,15 @@
           </div>
           <input type="button" value="Refazer" class="restart" />
         </div>
+      </section>
+      <!-- Loading Result -->
+      <section class="loadingResult hide">
+        <div class="generatingResult">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="text">Reunindo Informações</p>
       </section>
     </main>
     <script src="js/script.js" type="module"></script>

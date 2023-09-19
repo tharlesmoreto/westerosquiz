@@ -9,6 +9,7 @@
 
 body{
   background: #000000;
+  overflow-y: hidden;
   min-height: 100vh;
 }
 
@@ -55,13 +56,11 @@ body{
   margin-bottom: 20px;
 }
 
-
 .perguntaStart{
   font-size: 18px;
   font-weight: 600;
   color: #000000;
 }
-
 
 .btnStart{
   width: 9rem;
@@ -97,6 +96,7 @@ body{
   margin-bottom: 20px;
   text-align: center;
 }
+
 .answers{
   width: 100%;
 }
@@ -150,12 +150,10 @@ body{
   cursor:auto;
 }
 
-
 .select:hover{
   background: #000000;
   
 }
-
 
 .box{ 
   background: #ffffff;
@@ -209,7 +207,6 @@ body{
   align-items: center;
 }
 
-
 .loading span{ 
   font: 800 40px Nunito;
   color: #ffffff;
@@ -233,5 +230,47 @@ body{
 @keyframes blinking {
   50% {
     border-color: transparent;
+  }
+}
+
+.loadingResult{
+  text-align: center;
+}
+
+.loadingResult p{
+  font: 500 14px Nunito;
+  color: #ffffff;
+  margin-top: 49px;
+  text-align: center;
+}
+.generatingResult span{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin: 5px;
+}
+
+.generatingResult span{
+  animation: results .6s cubic-bezier(0.6, 0.1, 1, 0.4) infinite alternate;
+}
+
+.generatingResult span:nth-child(1){
+  animation-delay: .1s;
+}
+
+.generatingResult span:nth-child(2){
+  animation-delay: .2s;
+}
+
+.generatingResult span:nth-child(3){
+  animation-delay: .3s;
+}
+
+
+@keyframes results {
+  to{
+    transform: translateY(50px);
   }
 }

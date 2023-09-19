@@ -4,10 +4,11 @@ const btnStart = document.querySelector('.btnStart')
 const btnQuiz = document.querySelector('.btnQuiz')
 const btnRemake = document.querySelector('.restart')
 
+const loadingResult = document.querySelector('.loadingResult')
+
 const toStart = document.querySelector('.toStart')
 const gameQuiz = document.querySelector('.gameQuiz')
 const toResult = document.querySelector('.result')
-const logo = document.querySelector('.iconLogo')
 
 const addQuestion = document.querySelector('.questions')
 const addAnswers = document.querySelector('.answers')
@@ -42,7 +43,14 @@ function nextQuestion() {
   index++
   if (index >= questions.length) {
     btnQuiz.value = 'Resultado'
-    btnQuiz.addEventListener('click', result)
+    btnQuiz.addEventListener('click', () => {
+      loadingResult.classList.remove('hide')
+      gameQuiz.classList.add('hide')
+      setTimeout(() => {
+        result()
+        loadingResult.classList.add('hide')
+      }, 4000)
+    })
   }
 }
 
@@ -57,7 +65,6 @@ function select(event) {
 }
 
 function result() {
-  gameQuiz.classList.add('hide')
   toResult.classList.remove('hide')
   const indexFamilies = Math.floor(Math.random() * families.length)
   let family = families[indexFamilies]
@@ -66,23 +73,14 @@ function result() {
   addSymbol.src = family.symbol
 }
 
-btnRemake.addEventListener('click', showLoading)
+btnRemake.addEventListener('click', () => {
+  location.reload(true)
+})
+
+window.addEventListener('load', showLoading)
 
 function showLoading() {
-  toResult.classList.add('hide')
-  logo.classList.add('hide')
-  const div = document.createElement('div')
-  div.classList.add('loading')
-
-  const span = document.createElement('span')
-  span.innerHTML = 'WesterosQuiz'
-  div.appendChild(span)
-
-  document.body.appendChild(div)
-
-  setTimeout(() => hideLoading(), 5000)
-}
-
-function hideLoading() {
-  location.reload(true);
+  setTimeout(() => {
+    document.querySelector('.loading').style.display = 'none'
+  }, 4000)
 }
