@@ -7,31 +7,46 @@
     <title>WesterosQuiz</title>
   </head>
   <body>
-    <section class="global">
-      <div class="logo">
-        <p>WesterosQuiz</p>
-      </div>
-    </section>
-    <section class="start">
-      <div class="box">
-        <p class="titulo">
-          Onde reside a sua verdadeira lealdade!
-        </p> 
-        <p class="perguntaStart"> Vamos descobrir juntos?</p>
-        <input type="button" value="Começar" class="btnStart" />
-      </div>
-    </section>
-    <section class="process">
-      <div class="box">
-        <p class="titulo">Tão elevado como a honra!</p>
-        <div class="quiz">
-          <p class="perguntaProcess"></p>
-          <div class="respostas">
-          </div>
+    <header class="logo">
+      <p class="iconLogo">WesterosQuiz</p>
+    </header>
+    <main class="main">
+      <!-- Start -->
+      <section class="toStart">
+        <div class="start">
+          <p class="titulo">Onde reside a sua verdadeira lealdade!</p>
+          <p class="perguntaStart">Vamos descobrir juntos?</p>
+          <input type="button" value="Começar" class="btnStart" />
         </div>
-        <input type="button" value="Próxima" class="btnProcess" />
-      </div>
-    </section>
-    <script src="js/app.js" type="module"></script>
+      </section>
+      <!-- Quiz -->
+      <section class="gameQuiz hide">
+        <div class="quiz">
+          <p class="questions"></p>
+          <div class="answers"></div>
+          <input type="button" value="Próxima" class="btnQuiz" />
+        </div>
+      </section>
+      <!-- Result -->
+      <section class="result hide">
+        <div class="box">
+          <div class="finish">
+            <p class="text">
+              Sua lealdade é para com a casa
+              <br />
+              <span class="focus house"></span>
+            </p>
+            <img src="" alt="" class="symbol" />
+            <p class="text">
+              Grite seu Lema:
+              <br />
+              <span class="focus motto"></span>
+            </p>
+          </div>
+          <input type="button" value="Refazer" class="restart" />
+        </div>
+      </section>
+    </main>
+    <script src="js/script.js" type="module"></script>
   </body>
 </html>
