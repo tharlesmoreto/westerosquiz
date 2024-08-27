@@ -274,3 +274,16 @@ body{
     transform: translateY(50px);
   }
 }
+
+
+@media (max-width: 480px) {
+  .logo{
+    justify-content: center;
+    height: 100px;
+  }
+  .logo p{
+    margin-left: 0;
+    font-size: 25px; 
+   }
+
+}
