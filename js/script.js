@@ -12,7 +12,6 @@ const toResult = document.querySelector('.result')
 
 const addQuestion = document.querySelector('.questions')
 const addAnswers = document.querySelector('.answers')
-
 const addHouse = document.querySelector('.house')
 const addMotto = document.querySelector('.motto')
 const addSymbol = document.querySelector('.symbol')
